@@ -1,0 +1,12 @@
+<h1>Chat app with SignalR</h1>
+
+<ul class="list-style-none">
+  <li *ngFor="let message of messages">
+    {{ message.message }}
+  </li>
+</ul>
+
+<form (ngSubmit)="handleSubmit()">
+  <input type="text" name="message" [(ngModel)]="text" />
+  <button type="submit">Send</button>
+</form>
